@@ -1,0 +1,22 @@
+language: node_js
+node_js:
+  - "14"
+git:
+  depth: 3
+script:
+  - yarn test
+notifications:
+  email:
+    reciepents:
+      - carlossanchez@go-pharma.mx
+      - armandoboyzo@go-pharma.mx
+    on_success: always
+    on_failure: always
+deploy:
+  provide: heroku
+  skip-cleanup: true
+  keep-history: true
+  api_key: $API_TOKEN
+  app: botoxb-be
+  on:
+    repo: GoPharma-Devs/rankingBotox-BE
