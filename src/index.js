@@ -2,8 +2,11 @@ const express = require("express");
 const cors = require("cors");
 const helmet = require("helmet");
 
+const { createRoles } = require('./libs/initialSetup');
+
 const app = express();
 require("./db");
+createRoles();
 
 // Server config
 const { config } = require("./config/index");
