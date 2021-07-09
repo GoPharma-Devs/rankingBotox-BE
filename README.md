@@ -3,7 +3,7 @@
 
 ## Docs 📄
 
-[Documentation](#)
+[Documentation](https://documenter.getpostman.com/view/12403851/Tzm6mvyY)
 
 ## Packages that are used 📦
 
@@ -12,6 +12,8 @@
 - dotenv
 - helmet
 - mongoose
+- bcryptjs
+- jsonwebtoken
 
 ### Dev Dependencies 👩🏾‍💻
 
