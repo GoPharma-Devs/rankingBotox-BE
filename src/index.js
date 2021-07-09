@@ -4,6 +4,9 @@ const helmet = require("helmet");
 
 const { createRoles } = require('./libs/initialSetup');
 
+const authRoutes = require('./routes/auth.routes');
+const usersRoutes = require('./routes/users.routes');
+
 const app = express();
 require("./db");
 createRoles();
@@ -22,6 +25,8 @@ if (config.DEV) {
 }
 
 // Routes
+app.use('/api/auth', authRoutes);
+app.use('/api/users', usersRoutes);
 
 app.listen(config.PORT, () => {
   console.log(`Listening on: http://localhost:${config.PORT}`);
