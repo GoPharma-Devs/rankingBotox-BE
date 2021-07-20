@@ -2,7 +2,7 @@ const Player = require('../models/player');
 
 // Access leaderboard
 exports.getPlayers = async (req, res) => {
-    const players = await Player.find();
+    const players = await Player.find().sort({score:-1});
     res.json(players);
 };
 

@@ -8,7 +8,15 @@ const playerSchema = new Schema({
     score: {
         type: Number,
         required: true
+    },
+    thumbnail: {
+        type: String
     }
-});
+},
+{
+ timestamps: true,
+ versionKey: false,
+}
+);
 
 module.exports = model('Player', playerSchema);
