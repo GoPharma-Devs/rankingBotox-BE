@@ -9,7 +9,6 @@ const { createRoles } = require('./libs/initialSetup');
 const authRoutes = require('./routes/auth.routes');
 const usersRoutes = require('./routes/users.routes');
 const playersRoutes = require('./routes/players.routes');
-const uploadRoutes = require('./routes/upload.routes');
 
 const app = express();
 require("./db");
@@ -35,7 +34,6 @@ if (config.DEV) {
 app.use('/api/auth', authRoutes);
 app.use('/api/users', usersRoutes);
 app.use('/api/players', playersRoutes);
-app.use('/api/upload', uploadRoutes);
 
 // Welcome Route
 app.get('/', (req, res) => {

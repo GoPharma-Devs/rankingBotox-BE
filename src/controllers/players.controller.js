@@ -14,8 +14,8 @@ exports.getPlayer = async (req, res) => {
 
 // Create players
 exports.createPlayer = async (req, res) => {
-    const { username, score } = req.body;
-    const newPlayer = new Player({ username, score });
+    const { username, score, thumbnail } = req.body;
+    const newPlayer = new Player({ username, score, thumbnail });
     const playerSaved = await newPlayer.save()
     res.status(201).json(playerSaved);
 }
